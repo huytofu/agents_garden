@@ -1,6 +1,18 @@
-from config import configs
-from tools import *
+from ...config import all_configs
+from ...tools import smolagents_tools
 from smolagents import CodeAgent
+
+configs = all_configs["smolagents"]
+
+GoogleSearchTool = smolagents_tools["GoogleSearchTool"]
+DuckDuckGoSearchTool = smolagents_tools["DuckDuckGoSearchTool"]
+WebSearchTool = smolagents_tools["WebSearchTool"]
+ConvertedGooglePlacesTool = smolagents_tools["ConvertedGooglePlacesTool"]
+calculate_haversine_distance = smolagents_tools["calculate_haversine_distance"]
+prompt_generator_tool = smolagents_tools["prompt_generator_tool"]
+image_generation_tool = smolagents_tools["image_generation_tool"]
+ResumeScraperTool = smolagents_tools["ResumeScraperTool"]
+LinkedInJobSearchTool = smolagents_tools["LinkedInJobSearchTool"]
 
 WebsearchAgent = CodeAgent(
     tools=[

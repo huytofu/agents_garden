@@ -1,6 +1,8 @@
 from smolagents import CodeAgent
-from code_agents import *
+from .code_agents import *
+from ...config import all_configs
 
+configs = all_configs["smolagents"]
 
 MasterAgent = CodeAgent(
     managed_agents=[
